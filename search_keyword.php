@@ -27,7 +27,7 @@ echo "<h2>Show all jokes with the word " . $keywordfromform . "</h2>";
 $keywordfromform = "%" . $keywordfromform . "%";
 
 // Set the SQL statement
-$sql = "SELECT Joke_ID, Joke_question, Joke_answer, users_id, username FROM eqq3vu9i1kc3tbqw.jokes_table JOIN eqq3vu9i1kc3tbqw.users ON users.id = jokes_table.users_id WHERE Joke_question LIKE '$keywordfromform'";
+$sql = "SELECT Joke_ID, Joke_question, Joke_answer, users_id, username FROM eqq3vu9i1kc3tbqw.jokes_table JOIN eqq3vu9i1kc3tbqw.users ON eqq3vu9i1kc3tbqw.users.id = eqq3vu9i1kc3tbqw.jokes_table.users_id WHERE Joke_question LIKE '$keywordfromform'";
 
 // Print the SQL statement
 echo "SQL Statement = " . $sql . "<br>";
