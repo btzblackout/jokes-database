@@ -34,7 +34,7 @@ if(strlen($new_password1) <= 8)
 }
 
 // check to see if this username has already been registered.
-$sql = "SELECT * FROM users WHERE username = '$new_username'";
+$sql = "SELECT * FROM eqq3vu9i1kc3tbqw.users WHERE username = '$new_username'";
 $result = $mysqli->query($sql) or die (mysqli_error($mysqli));
 
 if ($result->num_rows > 0) {
@@ -49,7 +49,7 @@ else if ($new_password1 != $new_password2) {
 {
 
     // add the new user
-    $sql = "INSERT INTO users (id, username, password) VALUES (null, '$new_username', '$hashed_password')";
+    $sql = "INSERT INTO eqq3vu9i1kc3tbqw.users (id, username, password) VALUES (null, '$new_username', '$hashed_password')";
     $result = $mysqli->query($sql) or die (mysqli_error($mysqli));
     if ($result) {
         echo "Registration success!";
