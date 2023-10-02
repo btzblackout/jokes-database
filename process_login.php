@@ -19,7 +19,7 @@ $password = $_POST['password'];
 echo "<h2>You attempted to login with " . $username . " and " . $password . "</h2>";
 
 // Prepared statements instead of a single statement so it is more secured.
-$stmt = $mysqli->prepare ("SELECT id, username, password FROM users WHERE username = ?");
+$stmt = $mysqli->prepare ("SELECT id, username, password FROM eqq3vu9i1kc3tbqw.users WHERE username = ?");
 $stmt->bind_param("s", $username);
 
 $stmt->execute();
